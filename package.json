@@ -1,6 +1,6 @@
 {
   "name": "wloghub",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "simple logger that forms better format for aws cloudwatch",
   "main": "dist/index.js",
   "module": "src/index.ts",
