@@ -4,18 +4,17 @@ import * as Winston from 'winston'
 const {createLogger, format} = Winston
 
 const enumerateErrorFormat = format((info) => {
-    return R.map(value => {
-        if (value instanceof Error) {
-            return {
-                message: value.message,
-                stack: value.stack,
-                ...value
+    R.forEachObjIndexed((value, key) => {
+        if (info[key] instanceof Error) {
+            info[key] = {
+                message: info[key].message,
+                stack: info[key].stack, ...info[key]
             }
         }
-        return value
     }, info)
-})
 
+    return info
+})
 export const logger = createLogger({
     format: format.combine(
         enumerateErrorFormat(),
@@ -23,3 +22,4 @@ export const logger = createLogger({
     ),
     transports: [new Winston.transports.Console()]
 })
+
