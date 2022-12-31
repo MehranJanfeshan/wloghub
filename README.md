@@ -1,4 +1,4 @@
-## wloghub v1.0.2
+## wloghub
 
 A simple logger module that helps you to have a better logging experience in your nodejs application with the help of
 winston.
