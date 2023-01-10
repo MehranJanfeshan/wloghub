@@ -12,5 +12,8 @@
   "dependencies": {
     "ramda": "^0.28.0",
     "winston": "^3.8.2"
+  },
+  "devDependencies": {
+    "@types/node": "^18.11.18"
   }
 }
