@@ -17,6 +17,10 @@ const enumerateErrorFormat = format((info) => {
     info.correlationId = global['correlationId']
   }
 
+  if (process.env.correlationId) {
+    info.correlationId = process.env.correlationId
+  }
+
   return info
 })
 export const logger = createLogger({

@@ -20,8 +20,13 @@ In typescript
     logger.info({'Hello World'});
 
 ## correlationId
+
 If you want to add a correlationId to your logs, you can do it by adding correlationId to the global object.
-     
+
     global['correlationId'] = '1234';
+
+or you can add it to the env variable correlationId
+
+    process.env['correlationId'] = '1234';
 
 see [wloghub](https://github.com/MehranJanfeshan/wloghub) for more details.
